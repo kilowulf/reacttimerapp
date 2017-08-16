@@ -1,9 +1,12 @@
 //load required modules, components
 var React = require('react');
 var ReactDOM =require('react-dom');
-var Main = require('Main');
+
 //destructuring syntax to initialize multiple modules
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+var Main = require('Main');
+var Timer = require('Timer');
+var Countdown = require('Countdown');
 
 
 
@@ -27,8 +30,10 @@ ReactDOM.render(
         //IndexRoute takes a single argument
    <Router history={hashHistory}>
         <Route path="/" component={Main}>
-                
-        </Route>   
+        <Route path="countdown" component={Countdown}/>
+        <Route path="timer" component={Timer}/>
+        <IndexRoute component={Timer}/>
+        </Route>       
    </Router>, 
    document.getElementById('app')
 );
