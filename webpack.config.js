@@ -1,7 +1,10 @@
 var webpack = require('webpack');
 var path = require("path");
 
-module.exports = {       
+
+module.exports = { 
+    
+    
     // rules: [
     //   {
     //     test: /\.jsx?$/,
@@ -48,7 +51,8 @@ module.exports = {
             applicationStyles: 'app/styles/app.scss', 
             Nav: 'app/components/Nav.jsx',
             Timer: 'app/components/Timer.jsx', 
-            Countdown: 'app/components/Countdown.jsx'
+            Countdown: 'app/components/Countdown.jsx',
+            Clock: 'app/components/Clock.jsx'
             
         },
         extensions: ['', '.js', '.jsx']
@@ -60,12 +64,15 @@ module.exports = {
         loaders: [
             {
                 loader: 'babel-loader',
+                
                 query: {
                     presets: ['react', 'es2015', 'es2016']
                 },
                 test: /\.jsx?$/,
+                
                 exclude: /(node_modules|bower_components)/
-            }
+            },
+            
         ]
     // rules:[{
     //   use : [
