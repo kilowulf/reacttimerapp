@@ -17,8 +17,7 @@ var Main = (props) => {
                     <div className="column small-centered medium-6 large-4">
                     {props.children}
                     </div>                        
-                </div>
-                    <footer className="">CodeIQ <span>&#169;</span> 2017</footer>
+                </div>                    
             </div>                
         );
 }
